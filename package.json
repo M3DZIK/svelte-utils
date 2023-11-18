@@ -1,8 +1,9 @@
 {
     "name": "@medzik/svelte-utils",
     "description": "Svelte Utilities for TailwindCSS & DaisyUI",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "author": "M3DZIK <me@medzik.dev>",
+    "license": "MIT",
     "scripts": {
         "dev": "vite dev",
         "build": "vite build && npm run package",
