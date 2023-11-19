@@ -1,7 +1,7 @@
-<script>
-    import { AlertModal, ConfirmModal,modalStore, toastStore } from '$lib';
+<script lang="ts">
+    import { AlertModal, ConfirmModal, modalStore, PasswordInput, toastStore } from '$lib/index.js';
 
-    function showToast(variant) {
+    function showToast(variant: string | undefined = undefined) {
         toastStore.trigger({
             message: 'Hello World!',
             variant
@@ -58,10 +58,12 @@
             }
         });
     }
+
+    let passwordValue: string;
 </script>
 
 <div>
-    <button on:click={showToast} class="btn"> Show default toast </button>
+    <button on:click={() => showToast()} class="btn"> Show default toast </button>
 
     <button on:click={() => showToast('alert-success')} class="btn"> Show success toast </button>
 
@@ -74,4 +76,8 @@
     <button on:click={showAlertModal} class="btn"> Show alert modal </button>
     <button on:click={showConfirmModal} class="btn"> Show confirm modal </button>
     <button on:click={showMultipleModals} class="btn"> Show multiple modals </button>
+</div>
+
+<div class="max-w-sm">
+    <PasswordInput class="input-bordered" bind:value={passwordValue} />
 </div>

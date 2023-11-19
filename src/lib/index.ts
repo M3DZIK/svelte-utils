@@ -7,3 +7,5 @@ export { default as ConfirmModal } from './components/Modal/ConfirmModal.svelte'
 export { default as Modal } from './components/Modal/Modal.svelte';
 export { modalStore } from './components/Modal/stores.js';
 export type { ModalComponent } from './components/Modal/types.js';
+
+export { default as PasswordInput } from './components/Input/PasswordInput.svelte';
